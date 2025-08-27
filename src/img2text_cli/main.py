@@ -24,7 +24,7 @@ def clip_ocr():
 
 
 @click.command(
-    name="ocr",
+    name="img2text",
     epilog="""
 Examples:\n
 - Image file to text\n

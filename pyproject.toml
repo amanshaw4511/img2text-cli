@@ -40,7 +40,11 @@ Repository = "https://github.com/amanshaw4511/img2text-cli"
 img2text = "img2text_cli.main:ocr"
 
 [dependency-groups]
-dev = ["pre-commit>=4.3.0", "ruff>=0.12.10"]
+dev = [
+    "pre-commit>=4.3.0",
+ "pytest>=8.4.1",
+ "ruff>=0.12.10",
+]
 
 [build-system]
 requires = ["hatchling"]
