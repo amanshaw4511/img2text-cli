@@ -1,18 +1,47 @@
 [project]
 name = "img2text"
 version = "0.1.0"
-description = "Add your description here"
+description = "A CLI tool to extract text from images using OCR"
 readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aman Shaw", email = "amanshaw4511@protonmail.com" }]
+keywords = ["cli", "image", "ocr", "tesseract", "text-extraction"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Image Processing",
+  "Topic :: Text Processing",
+  "Topic :: Utilities",
+]
 dependencies = [
-    "click>=8.2.1",
-    "pillow>=11.3.0",
-    "pyperclip>=1.9.0",
-    "pyperclipimg>=0.2.0",
-    "pytesseract>=0.3.13",
+  "click>=8.2.1",
+  "pillow>=11.3.0",
+  "pyperclip>=1.9.0",
+  "pyperclipimg>=0.2.0",
+  "pytesseract>=0.3.13",
 ]
 
+[project.urls]
+Documentation = "https://github.com/amanshaw4511/img2text#readme"
+Homepage = "https://github.com/amanshaw4511/img2text"
+Issues = "https://github.com/amanshaw4511/img2text/issues"
+Repository = "https://github.com/amanshaw4511/img2text"
+
+[project.scripts]
+img2text = "img2text.main:ocr"
+
 [dependency-groups]
-dev = [
-    "ruff>=0.12.10",
-]
+dev = ["pre-commit>=4.3.0", "ruff>=0.12.10"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
