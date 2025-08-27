@@ -35,13 +35,13 @@ Examples:\n
    $ img2text --clip\n
 """,
 )
-@click.argument("image file", type=click.Path(exists=True), required=False)
+@click.argument("image_file", type=click.Path(exists=True), required=False)
 @click.option(
     "--clip",
     is_flag=True,
     help="Extract text from the clipboard image and copy it to the clipboard",
 )
-def ocr(clip: bool, filename: str | None):
+def ocr(clip: bool, image_file: str | None):
     """
     Extract text from an image
     """
@@ -49,7 +49,7 @@ def ocr(clip: bool, filename: str | None):
         clip_ocr()
         return
 
-    image = Image.open(get_img_data(filename))
+    image = Image.open(get_img_data(image_file))
     text = pytesseract.image_to_string(image=image)
     print(text)
 

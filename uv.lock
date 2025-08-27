@@ -66,7 +66,7 @@ wheels = [
 ]
 
 [[package]]
-name = "img2text"
+name = "img2text-cli"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

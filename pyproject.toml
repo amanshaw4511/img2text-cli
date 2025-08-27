@@ -1,17 +1,17 @@
 [project]
-name = "img2text"
+name = "img2text-cli"
 version = "0.1.0"
 description = "A CLI tool to extract text from images using OCR"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = { text = "GPL-3.0" }
 authors = [{ name = "Aman Shaw", email = "amanshaw4511@protonmail.com" }]
 keywords = ["cli", "image", "ocr", "tesseract", "text-extraction"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
   "Intended Audience :: End Users/Desktop",
-  "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.10",
@@ -31,13 +31,13 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/amanshaw4511/img2text#readme"
-Homepage = "https://github.com/amanshaw4511/img2text"
-Issues = "https://github.com/amanshaw4511/img2text/issues"
-Repository = "https://github.com/amanshaw4511/img2text"
+Documentation = "https://github.com/amanshaw4511/img2text-cli#readme"
+Homepage = "https://github.com/amanshaw4511/img2text-cli"
+Issues = "https://github.com/amanshaw4511/img2text-cli/issues"
+Repository = "https://github.com/amanshaw4511/img2text-cli"
 
 [project.scripts]
-img2text = "img2text.main:ocr"
+img2text = "img2text_cli.main:ocr"
 
 [dependency-groups]
 dev = ["pre-commit>=4.3.0", "ruff>=0.12.10"]
