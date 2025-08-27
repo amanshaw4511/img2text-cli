@@ -1,0 +1,18 @@
+[project]
+name = "img2text"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.2.1",
+    "pillow>=11.3.0",
+    "pyperclip>=1.9.0",
+    "pyperclipimg>=0.2.0",
+    "pytesseract>=0.3.13",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.10",
+]
