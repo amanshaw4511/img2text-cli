@@ -17,6 +17,12 @@ def get_img_data(filename: str | None):
     return io.BytesIO(data)
 
 
+def clip_ocr():
+    image = pyperclipimg.paste()
+    text = pytesseract.image_to_string(image=image)
+    pyperclip.copy(text)
+
+
 @click.command(
     name="ocr",
     epilog="""
@@ -46,12 +52,6 @@ def ocr(clip: bool, filename: str | None):
     image = Image.open(get_img_data(filename))
     text = pytesseract.image_to_string(image=image)
     print(text)
-
-
-def clip_ocr():
-    image = pyperclipimg.paste()
-    text = pytesseract.image_to_string(image=image)
-    pyperclip.copy(text)
 
 
 if __name__ == "__main__":
