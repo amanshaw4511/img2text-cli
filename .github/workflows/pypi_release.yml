@@ -17,7 +17,7 @@ jobs:
     - name: Extract tag name
       id: tag
       run: |
-        TAG_NAME=$(echo $GITHUB_REF | cut -d / -f 3)
+        TAG_NAME=$(echo $GITHUB_REF | cut -d / -f 3 | sed 's/^v//')
         echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
         echo "Extracted TAG_NAME: $TAG_NAME"
 
@@ -42,4 +42,5 @@ jobs:
     - name: Github Release
       uses: softprops/action-gh-release@v2
       with:
+          files: dist/img2text_cli-${{ env.TAG_NAME }}-py3-none-any.whl
           token: ${{ secrets.TOKEN_RELEASE }}
