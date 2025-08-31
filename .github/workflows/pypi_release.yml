@@ -42,4 +42,5 @@ jobs:
     - name: Github Release
       uses: softprops/action-gh-release@v2
       with:
+          files: dist/img2text_cli-${{ env.TAG_NAME }}-py3-none-any.whl
           token: ${{ secrets.TOKEN_RELEASE }}
